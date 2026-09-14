@@ -1,0 +1,226 @@
+*{
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(240, 237, 237);
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(240, 237, 237);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;            
+    padding: 20px;
+    font-family: "Bodoni Moda", serif;
+
+    
+}
+
+.logo {
+    grid-column: 2;
+    height: fit-content;
+    width: 300px;
+
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+    margin: 0;
+    padding: 0;
+}
+
+.listItems {
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    
+}
+
+.listItems:hover{
+    color: rgba(255, 217, 0);
+    text-decoration: underline;
+    text-decoration-color: gold;
+}
+
+.offerBtn{
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 217, 0, 0.753);
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    font-weight: bolder;
+    transition: background-color 0.5s ease;
+}
+
+.offerBtn:hover{
+    background-color: #333;
+    color: gold;
+    text-decoration: underline;
+    text-decoration-color: gold;
+
+}
+
+/* Dölj rutan som standard */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Mörk transparent bakgrund */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Själva popup-kortet */
+.modal-content {
+    background-color: rgb(233, 233, 231); /* Matchar din sajt */
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Stäng-knappen (krysset i hörnet) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Stil för formulärets fält inne i popupen */
+.modal-content input, 
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white; /* Så fälten syns tydligt mot bakgrunden */
+    box-sizing: border-box;
+    font-family: "arial", sans-serif;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    color: gold;
+}
+
+.hero-banner {
+    width: 100%;
+    line-height: 0; /* Tar bort eventuellt extra tomrum under bilden i vissa webbläsare */
+    background-color: #111; /* Snygg mörk bakgrund om bilden laddar långsamt */
+}
+
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: center 68%;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 500;
+}
+
+.hero-text-box {
+    position: absolute;     
+    top: 50%;               /* Centrerar vertikalt i höjd med bilden */
+    left: 8%;               /* Styr hur långt till vänster texten hamnar (där din ring är) */
+    transform: translateY(-50%); /* Finjusterar den exakta vertikala centreringen */
+    max-width: 450px;       /* Gör så att texten bryts snyggt och inte drar ut över hela skylten */
+    color: #ffffff;         /* Vit text för maximal kontrast */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); /* Ger en mörk skugga så texten läses lätt mot marken */
+}
+
+.hero-text-box p {
+    font-family: "Bodoni Moda", serif; /* Eller Fira Sans om du föredrar det för brödtext */
+    font-size: 2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#aboutUs {
+    padding: 80px 20px; /* Ger skön luft runt sektionen så den inte klistrar mot kanterna */
+    max-width: 900px;
+    margin: 0 auto; /* Centrerar hela sektionen på stora skärmar */
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Skapar ett, snyggt, jämnt avstånd mellan rubrik och text */
+}
+
+.about h2 {
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
+    text-decoration: underline;
+    text-underline-offset: 8px; /* Flyttar ner strecket lite snyggare från texten */
+    color: #111111;
+    margin: 0;
+    align-self: center;
+}
+
+.about p {
+    font-family: "Fira Sans", sans-serif; /* Eller vilken brödtext-typsnitt ni gillar */
+    font-size: 1.1rem;
+    line-height: 1.7; /* Gör brödtexten lättläst */
+    color: #444444;
+    margin: 0;
+}

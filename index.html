@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villans Bygg</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Caveat:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="logo" href="/"><img src="/images/Villans-Byggfirma-logo.svg" alt="Villans Byggfirma Logotype">
+            </a>
+            
+            <nav class="navbar">
+                <ul class="">
+                    <li><a class="listItems" href="#portfolio">Portfölj</a></li>
+                    <li><a class="listItems" href="#aboutUs">Om oss</a></li>
+                    <li><a class="listItems" href="#services">Tjänster</a></li>
+                </ul>
+                <button id="openModalBtn" class="offerBtn">Offert</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero-banner"><!--header typ där offertknappen ska vara och en bilden ska ligga som en sectionerad bakgrund-->
+            <div class="hero-content">
+                <img src="/images/omslag.jpg" alt="Construction sign with company name and contact info">
+                <div class="hero-text-box">
+                    <p>Här kan du skriva en kort och säljande text om ditt företag, typ slogan aktigt.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aboutUs">
+            <article class="about">
+                <h2>Om mig</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique accusamus non, accusantium nemo in eligendi molestiae porro optio adipisci fugiat. Fugiat illum beatae aliquid nostrum officiis veritatis quasi eligendi voluptatum!</p>
+            </article>
+        </section>
+
+        <section id="services">
+
+        </section>
+ 
+        <section id="portfolio"><!--Portfölj med lite olika utförda arbeten-->
+            <div>
+
+            </div>
+        </section>
+
+        <section id="reviews"><!--Betygsättning-->
+            <div>
+
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+
+<!-- SJÄLVA POP-UP-RUTAN (MODAL) -->
+        <div id="offerModal" class="modal">
+            <div class="modal-content">
+                <!-- Stäng-knapp (krysset) -->
+                <span class="close-btn">&times;</span>
+                
+                <h2>Begär offert</h2>
+                <p>Berätta om ert projekt så återkommer vi!</p>
+                
+                <!-- Ditt kontaktformulär flyttas hit -->
+                <form method="post" id="leadform">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Ditt namn" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Ditt telefonnummer" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Din mejladress" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="4" placeholder="Berätta gärna om era behov!"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="submit-btn">Skicka förfrågan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+        <script src="quoteBtn.js"></script>
+</body>
+</html>
