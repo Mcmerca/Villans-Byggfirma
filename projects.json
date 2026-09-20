@@ -3,10 +3,34 @@
         "title": "Renovering & förlängning av garderob",
         "images": [
             "/images/Projektbilder/garderob.jpg",
-            "img/villa-taby-2.jpg",
-            "img/villa-taby-3.jpg"
+            "/images/Projektbilder/garderob-3.jpg",
+            "/images/Projektbilder/garderob-4.jpg"
         ],
         "description": "Här har det skapats mer förvaring genom att förlänga ut kattvinden och bygga en platsbyggd garderob utan rygg så man kan nyttja all yta på ett smart sätt. Alla delar är handmålade och skrivbordsskiva och knoppar i ek är behandlade med hårdvaxolja.",
         "year": "2025"
+    },
+    {
+        "title": "Teskort 2",
+        "images": [
+            "/images/omslag.jpg"
+        ],
+        "description": "Beskrivnings text",
+        "year": "Årtal"
+    },
+    {
+        "title": "Hej",
+        "images": [
+            "/images/omslag.jpg"
+        ],
+        "description": "Beskrivnings text",
+        "year": "Årtal"
+    },
+    {
+        "title": "Teskort 4",
+        "images": [
+            "/images/omslag.jpg"
+        ],
+        "description": "Beskrivnings text",
+        "year": "Årtal"
     }
 ]

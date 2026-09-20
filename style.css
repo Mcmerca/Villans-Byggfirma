@@ -4,6 +4,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 91px;
 }
 
 body{
@@ -170,7 +171,7 @@ ul {
 .hero-banner img {
     width: 100%;
     height: auto;
-    max-height: 80vh;
+    max-height: 75vh;
     object-fit: cover;
     object-position: center 68%;
     display: block;
@@ -189,38 +190,159 @@ ul {
 }
 
 .hero-text-box p {
-    font-family: "Bodoni Moda", serif; /* Eller Fira Sans om du föredrar det för brödtext */
+    font-family: "Bodoni Moda", serif; 
     font-size: 2rem;
     line-height: 1.6;
     margin: 0;
 }
 
 #aboutUs {
+    
     padding: 80px 20px; /* Ger skön luft runt sektionen så den inte klistrar mot kanterna */
-    max-width: 900px;
-    margin: 0 auto; /* Centrerar hela sektionen på stora skärmar */
+    max-width: 1fr;
+    margin: 5px; /* Centrerar hela sektionen på stora skärmar */
+    box-shadow: 0px 1px #33333334;
 }
 
 .about {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+
+       & h2{
+        font-family: "Bodoni Moda", serif;
+        font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
+        text-decoration: underline;
+        text-underline-offset: 8px; 
+        color: #111111;
+        margin: 0 auto;
+        justify-self: center;
+        align-self: last baseline;
+        }
+
+        & p{
+            grid-column: 2;
+            grid-row: 2;
+            font-family: "Fira Sans", sans-serif; 
+            font-size: 1.1rem;
+            line-height: 1.7; /* Gör brödtexten lättläst */
+            color: #444444;
+            margin: 0 100px;
+        }
+
+        & img{
+            grid-row: 1 / span 2;
+            width: 50%;
+            height: auto;
+            justify-self: center;
+            align-self: center;
+            border-radius: 25px;
+        }
+    
+}
+
+#portfolio {
+    padding: 24px;
+}
+.project-section {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Skapar ett, snyggt, jämnt avstånd mellan rubrik och text */
+    justify-content: center;
+    
+    & h2{
+        font-family: "Bodoni Moda", serif;
+        font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
+        text-decoration: underline;
+        text-underline-offset: 8px; 
+        color: #111111;
+        margin: 0;
+        align-self: center;
+    }
 }
 
-.about h2 {
-    font-family: "Bodoni Moda", serif;
-    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
-    text-decoration: underline;
-    text-underline-offset: 8px; /* Flyttar ner strecket lite snyggare från texten */
-    color: #111111;
-    margin: 0;
-    align-self: center;
+#projects-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 24px auto;
 }
 
-.about p {
-    font-family: "Fira Sans", sans-serif; /* Eller vilken brödtext-typsnitt ni gillar */
-    font-size: 1.1rem;
-    line-height: 1.7; /* Gör brödtexten lättläst */
-    color: #444444;
-    margin: 0;
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 600px;
+    background-color: #c5bbbb;
+    border: thick solid rgba(231, 214, 115, 0.329);
+    border-radius: 10px 10px 0px 0px;
+    
+    
 }
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    flex-shrink: 0;
+
+    & img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    & img.active-img{
+        opacity: 1;
+    }
+}
+
+.slideshow-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+
+}
+
+.slideshow-dots span {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s, transform 0.3s;
+
+    
+}
+
+.slideshow-dots span.active-dot {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+
+    & .project-desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    & .project-year {
+        
+    }
+}
+
