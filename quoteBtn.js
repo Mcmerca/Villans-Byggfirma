@@ -1,22 +1,33 @@
-// Hämta elementen
-const modal = document.getElementById("offerModal");
-const btn = document.getElementById("openModalBtn");
-const span = document.getElementsByClassName("close-btn")[0];
+const offerForm = document.querySelector("#offerForm");
+const offerBtn = document.querySelector(".offerBtn");
+const closeOfferForm = document.querySelector(".close-btn");
+const formContent = document.querySelector(".form-content")
 
-// När man klickar på "Offert"-knappen -> visa rutan
-btn.onclick = function(e) {
-    e.preventDefault(); // Hindrar länkens standardbeteende
-    modal.style.display = "flex";
+function openForm() {
+    offerForm.style.display = "flex";
 }
 
-// När man klickar på krysset (X) -> stäng rutan
-span.onclick = function() {
-    modal.style.display = "none";
+function closeForm() {
+    offerForm.style.display = "none";
 }
 
-// När man klickar utanför själva rutan (på den mörka bakgrunden) -> stäng rutan
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+
+offerBtn.addEventListener("click", function(event){ 
+    openForm();
+    event.stopPropagation();
+});
+
+if (closeOfferForm) {
+    closeOfferForm.addEventListener("click", closeForm)
+}
+
+document.addEventListener("click", function(event){     //stänga fönster när man klickar utanför formuläret
+    if (offerForm.style.display === "flex") {
+        const isClickInside = formContent.contains(event.target);
+        const isClickOnOpen = offerBtn.contains(event.target);
+
+        if (!isClickInside && !isClickOnOpen){
+            closeForm();
+        }
     }
-}
+});

@@ -12,4 +12,6 @@ TODO:
 -Lägga till "Tjänster" sektionen på startsidan
 -Lägga till en Footer likt dem flesta stylingmässigt.
 -Koppla offertknappens form med en mail.
+-Skriva om quoteBtn (check) & project-loader själv så det är min egna kod
+-Styla Modalen på nytt och själv. 
 

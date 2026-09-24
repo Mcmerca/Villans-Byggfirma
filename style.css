@@ -93,7 +93,7 @@ ul {
 }
 
 /* Dölj rutan som standard */
-.modal {
+.form {
     display: none; 
     position: fixed; 
     z-index: 1000; 
@@ -107,7 +107,7 @@ ul {
 }
 
 /* Själva popup-kortet */
-.modal-content {
+.form-content {
     background-color: rgb(233, 233, 231); /* Matchar din sajt */
     padding: 30px;
     border-radius: 8px;
@@ -134,8 +134,8 @@ ul {
 }
 
 /* Stil för formulärets fält inne i popupen */
-.modal-content input, 
-.modal-content textarea {
+.form-content input, 
+.form-content textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
