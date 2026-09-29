@@ -15,3 +15,7 @@ TODO:
 -Skriva om quoteBtn (check) & project-loader själv så det är min egna kod
 -Styla Modalen på nytt och själv. 
 
+#Brainstorming:
+Definiera första bild och prick
+göra en egen funktion för bildspel
+Göra en egen funktion för att skapa prickarna?

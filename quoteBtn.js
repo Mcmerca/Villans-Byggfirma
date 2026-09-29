@@ -11,15 +11,9 @@ function closeForm() {
     offerForm.style.display = "none";
 }
 
+offerBtn.addEventListener("click", openForm);
+closeOfferForm.addEventListener("click", closeForm)
 
-offerBtn.addEventListener("click", function(event){ 
-    openForm();
-    event.stopPropagation();
-});
-
-if (closeOfferForm) {
-    closeOfferForm.addEventListener("click", closeForm)
-}
 
 document.addEventListener("click", function(event){     //stänga fönster när man klickar utanför formuläret
     if (offerForm.style.display === "flex") {
