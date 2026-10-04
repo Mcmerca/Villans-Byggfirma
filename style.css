@@ -58,6 +58,17 @@ ul {
     padding: 0;
 }
 
+/* För att slippa ändra vartenda titel på hemsidan. Ta bort den som är nästad i dem andra om detta räcker!*/
+h2 {
+        font-family: "Bodoni Moda", serif;
+        font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
+        text-decoration: underline;
+        text-underline-offset: 8px; 
+        color: #111111;
+        margin: 0;
+        align-self: center;
+}
+
 .listItems {
     color: black;
     padding: 5px;
@@ -242,11 +253,19 @@ ul {
 
 #portfolio {
     padding: 24px;
+    box-shadow: 0px 1px #33333334;
 }
 .project-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /*Ifall jag kan fixa ett penseldrag i bakgrunden på projekt-sektionen*/
+    /* position: relative; /* Bra om du vill positionera penseldraget exakt 
+    background-image: url('/images/penseldrag.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Gör att penseldraget anpassar sig snyggt efter sektionens storlek 
+    padding: 60px 20px; */
     
     & h2{
         font-family: "Bodoni Moda", serif;
@@ -345,4 +364,74 @@ ul {
         
     }
 }
+
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & article{
+            font-family: "Fira Sans", sans-serif; 
+            font-size: 1.1rem;
+            line-height: 1.7; /* Gör brödtexten lättläst */
+            color: #444444;
+            margin: 0 100px;
+    }
+}
+
+/*///////////////////////AI-Footer///////////////////////////////////*/
+/* Sparsmakad Footer */
+footer {
+    background-color: #aaa6a669; /* Anpassa efter din sidfärg (t.ex. vit eller svagt benvit) */
+    border-top: 1px solid #eae5de; /* En tunn, diskret linje */
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+    color: #555;
+    font-family: 'Fira Sans', sans-serif; /* Eller vilket typsnitt du föredrar */
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-copy {
+    margin: 0;
+    color: #666;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+
+/* Responsivt för mobiler (stapla på höjden och centrera) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/*//////////////////////////////////////////////////////////////////*/
 

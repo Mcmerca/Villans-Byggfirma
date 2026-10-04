@@ -1,3 +1,6 @@
+
+import { fetchProjects } from "./projectService.js";
+
 const template = document.querySelector("#project-template");
 
 
@@ -30,15 +33,17 @@ function imageSlideshow(card, images) {
     let currentIndex = 0;
     let timer;
 
-    images.forEach((_image, index) => { /*Note to self, ska denna verkligen vara en forEach?*/
+    images.forEach(() => { 
         const span = document.createElement("span");
         dotsContainer.appendChild(span);
     });
 
-    dotsContainer.querySelector("span").classList.add("active-dot");
+   const allDots = dotsContainer.querySelectorAll("span");
+   if (allDots.length > 0) {
+        allDots[0].classList.add("active-dot");
+   }
 
     cardContainer.addEventListener("mouseenter", () => {
-        console.log("Musen hovrar")
         timer = setInterval(() => {
             currentIndex++
             if (currentIndex >= images.length) {
@@ -47,32 +52,34 @@ function imageSlideshow(card, images) {
 
             img.src = images[currentIndex];
 
-            const allDots = dotsContainer.querySelectorAll("span");
-            allDots.forEach(dot => {
-                dot.classList.remove("active-dot");
-            });
-
+            allDots.forEach(dot => dot.classList.remove("active-dot"));
             allDots[currentIndex].classList.add("active-dot");
 
         }, 1500);
     });
 
     cardContainer.addEventListener("mouseleave", () => {
-        console.log("Musen har slutat att hovra")
         clearInterval(timer);
+        
+        currentIndex = 0;
+        img.src = images[0];
+        
+        allDots.forEach(dot => dot.classList.remove("active-dot"));
+        if (allDots.length > 0) {
+            allDots[0].classList.add("active-dot");
+        }
     });
 
 }
 
 
 
-
-
-fetch("projects.json")
-    .then(response => response.json())
-    .then (projects => {
+fetchProjects().then(projects => {
+    const grid = document.querySelector("#projects-grid");
+    if (grid) {
         projects.slice(0, 3).forEach(project => {
             const card = getProjects(project);
-            document.querySelector("#projects-grid").appendChild(card);
+            grid.appendChild(card);
         });
-    })
+    }
+});

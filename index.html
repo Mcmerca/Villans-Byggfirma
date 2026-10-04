@@ -18,8 +18,8 @@
             
             <nav class="navbar">
                 <ul>
-                    <li><a class="listItems" href="#portfolio">Portfölj</a></li>
                     <li><a class="listItems" href="#aboutUs">Om oss</a></li>
+                    <li><a class="listItems" href="#portfolio">Portfölj</a></li>
                     <li><a class="listItems" href="#services">Tjänster</a></li>
                 </ul>
                 <button id="openOfferBtn" class="offerBtn">Offert</button>
@@ -31,7 +31,7 @@
             <div class="hero-content">
                 <img src="/images/omslag.jpg" alt="Construction sign with company name and contact info">
                 <div class="hero-text-box">
-                    <p>Här kan du skriva en kort och säljande text om ditt företag, typ slogan aktigt.</p>
+<!--                     <p>Här kan du skriva en kort och säljande text om ditt företag, typ slogan aktigt.</p> -->
                 </div>
             </div>
         </section>
@@ -43,10 +43,6 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique accusamus non, accusantium nemo in eligendi molestiae porro optio adipisci fugiat. Fugiat illum beatae aliquid nostrum officiis veritatis quasi eligendi voluptatum!</p>
             </article>
         </section>
-
-        <section id="services">
-
-        </section>
  
         <section id="portfolio"><!--Portfölj med lite olika utförda arbeten-->
             <div class="project-section">
@@ -55,15 +51,25 @@
             </div>
         </section>
 
-        <section id="reviews"><!--Betygsättning-->
-            <div>
-
-            </div>
+         <section id="services">
+            <h2>Tjänster</h2>
+            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem soluta id aliquam excepturi libero maiores numquam. Voluptatum quas ipsam odit animi, sit perspiciatis consectetur excepturi, consequuntur molestiae, eveniet recusandae perferendis!</article>
+            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem soluta id aliquam excepturi libero maiores numquam. Voluptatum quas ipsam odit animi, sit perspiciatis consectetur excepturi, consequuntur molestiae, eveniet recusandae perferendis!</article>
+            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem soluta id aliquam excepturi libero maiores numquam. Voluptatum quas ipsam odit animi, sit perspiciatis consectetur excepturi, consequuntur molestiae, eveniet recusandae perferendis!</article>
         </section>
-
         <footer>
-
+            <div class="footer-container">
+                <p class="footer-copy">&copy; <span id="year"></span> Villans Bygg. Alla rättigheter förbehållna.</p>
+                <div class="footer-links">
+                    <a href="tel:0701234567">070-123 45 67</a>
+                    <a href="mailto#">johnny@villansbygg.se</a>
+                </div>
+            </div>
         </footer>
+
+
+
+
 
 <!-- SJÄLVA POP-UP-RUTAN (MODAL) -->
         <div id="offerForm" class="form">
@@ -108,10 +114,11 @@
                     <h3 class="project-title"></h3>
                     <p class="project-desc"></p>
                     <span class="project-year"></span>
+                    <a href="/projects.html" class="project-link">Läs mer</a>
                 </div>
             </div>
         </template>
         <script src="quoteBtn.js"></script>
-        <script src="projectLoader.js"></script>
+        <script src="projectLoader.js" type="module"></script>
 </body>
 </html>
