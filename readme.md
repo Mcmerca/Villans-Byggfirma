@@ -12,11 +12,12 @@ TODO:
 - [x] ~~Lägga till "Tjänster" sektionen på startsidan~~
 - [x] ~~Lägga till en Footer likt dem flesta stylingmässigt.~~
 - [] Koppla offertknappens form med en mail.
-- [/] ~~Skriva om quoteBtn~~ & project-loader själv så det är min egna kod
+- [x] ~~Skriva om quoteBtn & project-loader själv så det är min egna kod~~
 - [] Styla Modalen på nytt och själv. 
-- [] Styla visa mer knappen i projects.
+- [x] ~~Styla visa mer knappen i projects.~~
 - [] Styla Tjänster sektionen.
 - [] Styla projects.html.
+- [] Lägga till margin bottom på projektkorten och ta bort det från projekt-sektionen när media queries ska börja definieras.
 
 
 

@@ -31,23 +31,23 @@
             <div class="hero-content">
                 <img src="/images/omslag.jpg" alt="Construction sign with company name and contact info">
                 <div class="hero-text-box">
-<!--                     <p>Här kan du skriva en kort och säljande text om ditt företag, typ slogan aktigt.</p> -->
+                <!-- <p>Här kan du skriva en kort och säljande text om ditt företag, typ slogan aktigt.</p> -->
                 </div>
             </div>
         </section>
 
         <section id="aboutUs">
             <article class="about">
-                <img src="/images/jn-portrait.png" alt="">
+                <img src="/images/jn-portrait.png" alt="Portrait picture of the owner">
                 <h2>Om mig</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique accusamus non, accusantium nemo in eligendi molestiae porro optio adipisci fugiat. Fugiat illum beatae aliquid nostrum officiis veritatis quasi eligendi voluptatum!</p>
             </article>
         </section>
  
-        <section id="portfolio"><!--Portfölj med lite olika utförda arbeten-->
+        <section id="portfolio">
             <div class="project-section">
                 <h2>Tidigare arbeten</h2>
-                <div id="projects-grid"></div>   <!--Här denna kan ta in projekten automatiskt och använder sig av en template fil istället-->
+                <div id="projects-grid"></div>   <!--Denna tar in projekten automatiskt och använder sig av en template fil istället-->
             </div>
         </section>
 
@@ -71,16 +71,16 @@
 
 
 
-<!-- SJÄLVA POP-UP-RUTAN (MODAL) -->
+<!-- POP-UP RUTA Offert -->
         <div id="offerForm" class="form">
             <div class="form-content">
-                <!-- Stäng-knapp (krysset) -->
+                <!-- Stäng knapp -->
                 <span class="close-btn">&times;</span>
                 
                 <h2>Begär offert</h2>
                 <p>Berätta om ert projekt så återkommer vi!</p>
                 
-                <!-- Ditt kontaktformulär flyttas hit -->
+                <!-- Kontaktformulär flyttas hit -->
                 <form method="post" id="leadform">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Ditt namn" required>
@@ -113,8 +113,10 @@
                 <div class="project-info">
                     <h3 class="project-title"></h3>
                     <p class="project-desc"></p>
-                    <span class="project-year"></span>
-                    <a href="/projects.html" class="project-link">Läs mer</a>
+                    <div class="project-tags">
+                        <p class="project-year"></p>
+                        <a href="/projects.html" class="project-link">Läs mer</a>
+                    </div>
                 </div>
             </div>
         </template>

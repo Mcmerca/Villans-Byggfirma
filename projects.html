@@ -24,7 +24,10 @@
         </div>
     </header>
     <main>
-        
+        <section id="gallery-section">
+            <h2></h2>
+            <div id="gallery-grid"></div> <!-- denna ska ta in templates med data från projects.json -->
+        </section>
     </main>
 
         <footer>
@@ -36,6 +39,18 @@
                 </div>
             </div>
         </footer>
+
+        <template id="gallery-template">
+            <article class="gallery-item">
+                <img src="" alt="">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title"></h3>
+                        <p class="gallery-desc"></p>
+                        <p class="gallery-year"></p>
+                    </div>
+            </article>
+        </template>
+
     <script src="quoteBtn.js"></script>
     <script src="allProjects.js" type="module"></script>
 </body>
