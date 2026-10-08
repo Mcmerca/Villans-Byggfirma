@@ -1,5 +1,5 @@
 
-import { fetchProjects } from "./projectService.js";
+import {fetchProjects} from "./projectService.js";
 
 const template = document.querySelector("#project-template");
 

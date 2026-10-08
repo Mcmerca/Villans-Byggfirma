@@ -441,6 +441,47 @@ footer {
     text-decoration: underline;
 }
 
+/*///////////////////////////////////////////////////////////////////*/
+/*                          Project.html styling                     */
+/*///////////////////////////////////////////////////////////////////*/
+
+.gallery-item {
+
+}
+
+.carousel-container {
+    display: flex;
+    justify-self: center;
+    background-color: #000000;
+    perspective: 1500px;
+    overflow: hidden;
+    height: 400px;
+
+
+    & img {
+        width: 400px;
+        height: 400px;
+    }
+    & .is-center{
+        order: 2;
+    }
+    & .is-left {
+        transform: rotateY(45deg) translateX(100px);
+        transform-origin: left;
+        order: 1; 
+        opacity: 0.5;
+        
+          
+    }
+    & .is-right {
+        transform: rotateY(-45deg) translateX(-100px);
+        transform-origin: right;
+        order: 3;
+        opacity: 0.5;
+    }
+}
+
+
 
 /* Responsivt för mobiler (stapla på höjden och centrera) */
 @media (max-width: 768px) {

@@ -16,8 +16,10 @@ TODO:
 - [] Styla Modalen på nytt och själv. 
 - [x] ~~Styla visa mer knappen i projects.~~
 - [] Styla Tjänster sektionen.
-- [] Styla projects.html.
 - [] Lägga till margin bottom på projektkorten och ta bort det från projekt-sektionen när media queries ska börja definieras.
+- [] Felsöka quoteBtn på projekt-sidan.
+- [] Bygga allProjects.js för att ta in alla projekt på projects.html dynamiskt mot ett template. 
+- [] Styla projects.html.
 
 
 
