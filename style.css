@@ -25,8 +25,6 @@ header{
     align-items: center;            
     padding: 20px;
     font-family: "Bodoni Moda", serif;
-
-    
 }
 
 .logo {
@@ -34,12 +32,11 @@ header{
     height: fit-content;
     width: 300px;
 
-}
-
-.logo img {
+    & img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block; 
+    }
 }
 
 .navbar {
@@ -53,20 +50,20 @@ header{
 ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 15px; 
     margin: 0;
     padding: 0;
 }
 
-/* För att slippa ändra vartenda titel på hemsidan. Ta bort den som är nästad i dem andra om detta räcker!*/
 h2 {
-        font-family: "Bodoni Moda", serif;
-        font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
-        text-decoration: underline;
-        text-underline-offset: 8px; 
-        color: #111111;
-        margin: 0;
-        align-self: center;
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-decoration: underline;
+    text-underline-offset: 8px; 
+    color: #111111;
+    margin: 0;
+    align-self: center;
 }
 
 .listItems {
@@ -75,7 +72,6 @@ h2 {
     font-weight: bold;
     transition: color 0.3s ease;
     text-decoration: none;
-    
 }
 
 .listItems:hover{
@@ -86,6 +82,7 @@ h2 {
 
 .offerBtn{
     border: none;
+    align-self: center;
     border-radius: 5px;
     background-color: rgba(255, 217, 0, 0.753);
     height: 50px;
@@ -100,10 +97,8 @@ h2 {
     color: gold;
     text-decoration: underline;
     text-decoration-color: gold;
-
 }
 
-/* Dölj rutan som standard */
 .form {
     display: none; 
     position: fixed; 
@@ -112,14 +107,13 @@ h2 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Mörk transparent bakgrund */
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
 }
 
-/* Själva popup-kortet */
 .form-content {
-    background-color: rgb(233, 233, 231); /* Matchar din sajt */
+    background-color: rgb(233, 233, 231);
     padding: 30px;
     border-radius: 8px;
     width: 90%;
@@ -129,7 +123,6 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Stäng-knappen (krysset i hörnet) */
 .close-btn {
     position: absolute;
     top: 15px;
@@ -144,7 +137,6 @@ h2 {
     color: #000;
 }
 
-/* Stil för formulärets fält inne i popupen */
 .form-content input, 
 .form-content textarea {
     width: 100%;
@@ -152,7 +144,7 @@ h2 {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: white; /* Så fälten syns tydligt mot bakgrunden */
+    background-color: white;
     box-sizing: border-box;
     font-family: "arial", sans-serif;
 }
@@ -175,8 +167,8 @@ h2 {
 
 .hero-banner {
     width: 100%;
-    line-height: 0; /* Tar bort eventuellt extra tomrum under bilden i vissa webbläsare */
-    background-color: #111; /* Snygg mörk bakgrund om bilden laddar långsamt */
+    line-height: 0;
+    background-color: #111;
 }
 
 .hero-banner img {
@@ -192,12 +184,12 @@ h2 {
 
 .hero-text-box {
     position: absolute;     
-    top: 50%;               /* Centrerar vertikalt i höjd med bilden */
-    left: 8%;               /* Styr hur långt till vänster texten hamnar (där din ring är) */
-    transform: translateY(-50%); /* Finjusterar den exakta vertikala centreringen */
-    max-width: 450px;       /* Gör så att texten bryts snyggt och inte drar ut över hela skylten */
-    color: #ffffff;         /* Vit text för maximal kontrast */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); /* Ger en mörk skugga så texten läses lätt mot marken */
+    top: 50%;             
+    left: 8%;             
+    transform: translateY(-50%);
+    max-width: 450px;       
+    color: #ffffff;        
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero-text-box p {
@@ -208,10 +200,9 @@ h2 {
 }
 
 #aboutUs {
-    
-    padding: 80px 20px; /* Ger skön luft runt sektionen så den inte klistrar mot kanterna */
+    padding: 80px 20px;
     max-width: 1fr;
-    margin: 5px; /* Centrerar hela sektionen på stora skärmar */
+    margin: 5px;
     box-shadow: 0px 1px #33333334;
 }
 
@@ -221,7 +212,7 @@ h2 {
 
        & h2{
         font-family: "Bodoni Moda", serif;
-        font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
+        font-size: clamp(2.5rem, 5vw, 4rem);
         text-decoration: underline;
         text-underline-offset: 8px; 
         color: #111111;
@@ -235,7 +226,7 @@ h2 {
             grid-row: 2;
             font-family: "Fira Sans", sans-serif; 
             font-size: 1.1rem;
-            line-height: 1.7; /* Gör brödtexten lättläst */
+            line-height: 1.7;
             color: #444444;
             margin: 0 100px;
         }
@@ -243,33 +234,28 @@ h2 {
         & img{
             grid-row: 1 / span 2;
             width: 50%;
+            min-width: 200px;
             height: auto;
             justify-self: center;
             align-self: center;
             border-radius: 25px;
         }
-    
 }
 
 #portfolio {
     padding: 24px;
     box-shadow: 0px 1px #33333334;
+    background-color: rgba(233, 213, 98, 0.452);
 }
+
 .project-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*Ifall jag kan fixa ett penseldrag i bakgrunden på projekt-sektionen*/
-    /* position: relative; /* Bra om du vill positionera penseldraget exakt 
-    background-image: url('/images/penseldrag.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; /* Gör att penseldraget anpassar sig snyggt efter sektionens storlek 
-    padding: 60px 20px; */
     
     & h2{
         font-family: "Bodoni Moda", serif;
-        font-size: clamp(2.5rem, 5vw, 4rem); /* Responsiv storlek som inte spränger mobilen */
+        font-size: clamp(2.5rem, 5vw, 4rem);
         text-decoration: underline;
         text-underline-offset: 8px; 
         color: #111111;
@@ -279,24 +265,26 @@ h2 {
 }
 
 #projects-grid {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 24px 10px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    justify-content: space-between;
+    width: 100%;
     height: 600px;
     background-color: #c5bbbb;
-    border: thick solid rgba(231, 214, 115, 0.329);
+    border: thick solid rgba(29, 29, 29, 0.616);
     border-radius: 10px 10px 0px 0px;
-    margin-bottom: 50px;
-    
-    
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .slideshow-container {
@@ -330,7 +318,6 @@ h2 {
     display: flex;
     gap: 10px;
     z-index: 2;
-
 }
 
 .slideshow-dots span {
@@ -340,8 +327,6 @@ h2 {
     border-radius: 50%;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
     transition: background-color 0.5s, transform 0.3s;
-
-    
 }
 
 .slideshow-dots span.active-dot {
@@ -349,12 +334,12 @@ h2 {
     transform: scale(1.2);
 }
 
-.project-info { /*Ändrade detta till grid istället så jag enklare kan styra ytans storlekar*/
+.project-info {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     overflow: auto;
     height: 200px;
-    padding: 0px 5px;
+    padding: 0px 10px;
 
     & .project-desc {
         display: -webkit-box;
@@ -368,7 +353,6 @@ h2 {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        
     }
     & .project-year {
         text-decoration: underline;
@@ -379,33 +363,92 @@ h2 {
         text-decoration: none;
         color: #111;
         font-weight: bold;
-        
     }
 }
 
+/* SERVICES SECTION */
 #services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #111;
+
+    & .service-title {
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    & .service-intro {
+        grid-column: 1 / -1;
+        justify-self: center;
+        text-align: center;
+        max-width: 700px;
+        margin-bottom: 40px;
+        font-family: "Fira Sans", sans-serif;
+        color: #ccc;
+    }
+
+    & .service-card:nth-child(3) {
+        margin-top: 80px; 
+    }
+}
+
+.service-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border: thick solid rgba(231, 214, 115, 0.644);
+    border-radius: 10px;
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 
-    & article{
-            font-family: "Fira Sans", sans-serif; 
-            font-size: 1.1rem;
-            line-height: 1.7; /* Gör brödtexten lättläst */
-            color: #444444;
-            margin: 0 100px;
+    & img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    & h3 {
+        font-family: "Bodoni Moda", serif;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    & p {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+    & .read-more-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #0099ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        width: fit-content;
     }
 }
 
-/*///////////////////////AI-Footer///////////////////////////////////*/
-/* Sparsmakad Footer */
 footer {
-    background-color: #aaa6a669; /* Anpassa efter din sidfärg (t.ex. vit eller svagt benvit) */
-    border-top: 1px solid #eae5de; /* En tunn, diskret linje */
+    background-color: #aaa6a669;
+    border-top: 1px solid #eae5de;
     padding: 2.5rem 2rem;
-    margin-top: 4rem;
     color: #555;
-    font-family: 'Fira Sans', sans-serif; /* Eller vilket typsnitt du föredrar */
+    font-family: 'Fira Sans', sans-serif;
     font-size: 0.9rem;
 }
 
@@ -441,14 +484,6 @@ footer {
     text-decoration: underline;
 }
 
-/*///////////////////////////////////////////////////////////////////*/
-/*                          Project.html styling                     */
-/*///////////////////////////////////////////////////////////////////*/
-
-.gallery-item {
-
-}
-
 .carousel-container {
     display: flex;
     justify-self: center;
@@ -456,7 +491,6 @@ footer {
     perspective: 1500px;
     overflow: hidden;
     height: 400px;
-
 
     & img {
         width: 400px;
@@ -470,8 +504,6 @@ footer {
         transform-origin: left;
         order: 1; 
         opacity: 0.5;
-        
-          
     }
     & .is-right {
         transform: rotateY(-45deg) translateX(-100px);
@@ -481,16 +513,62 @@ footer {
     }
 }
 
+/* Standardläge på dator (dölj hamburgarknappen) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #111;
+}
 
-
-/* Responsivt för mobiler (stapla på höjden och centrera) */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
+
+    #services,
+    #projects-grid {
+        grid-template-columns: 1fr; 
+
+        & .service-card:nth-child(3),
+        & .project-card:nth-child(3) {
+            margin-top: 0;
+        }
+    }
 }
 
+@media (max-width: 1100px) {
+    /* Visa hamburgarknappen i mobilen */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        grid-column: 3;
+        justify-self: end;
+    }
 
-/*//////////////////////////////////////////////////////////////////*/
+    /* Dölj navigeringslistan som standard i mobilen tills den aktiveras/öppnas */
+    .navbar ul {
+        display: none; /* Dold tills man klickar på hamburgaren */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(240, 237, 237);
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 20px;
+    }
 
+    /* Om du vill att menyn ska visas när man klickar (toggla med en klass som heter 'active' via JS) */
+    .navbar ul.active {
+        display: flex;
+    }
+}

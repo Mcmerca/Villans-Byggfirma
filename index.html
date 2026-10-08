@@ -17,17 +17,18 @@
             </a>
             
             <nav class="navbar">
-                <ul>
+                <button class="menu-toggle" id="menu-btn">&#9776;</button>
+                <ul id="nav-menu">
                     <li><a class="listItems" href="#aboutUs">Om oss</a></li>
                     <li><a class="listItems" href="#portfolio">Portfölj</a></li>
                     <li><a class="listItems" href="#services">Tjänster</a></li>
+                    <button id="openOfferBtn" class="offerBtn">Offert</button>
                 </ul>
-                <button id="openOfferBtn" class="offerBtn">Offert</button>
             </nav>
         </div>
     </header>
     <main>
-        <section class="hero-banner"><!--header typ där offertknappen ska vara och en bilden ska ligga som en sectionerad bakgrund-->
+        <section class="hero-banner">
             <div class="hero-content">
                 <img src="/images/omslag.jpg" alt="Construction sign with company name and contact info">
                 <div class="hero-text-box">
@@ -52,16 +53,37 @@
         </section>
 
          <section id="services">
-            <h2>Tjänster</h2>
-            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem soluta id aliquam excepturi libero maiores numquam. Voluptatum quas ipsam odit animi, sit perspiciatis consectetur excepturi, consequuntur molestiae, eveniet recusandae perferendis!</article>
-            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem soluta id aliquam excepturi libero maiores numquam. Voluptatum quas ipsam odit animi, sit perspiciatis consectetur excepturi, consequuntur molestiae, eveniet recusandae perferendis!</article>
-            <article>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem soluta id aliquam excepturi libero maiores numquam. Voluptatum quas ipsam odit animi, sit perspiciatis consectetur excepturi, consequuntur molestiae, eveniet recusandae perferendis!</article>
+            <h2 class="service-title">Tjänster</h2>
+            <article class="service-card">
+                <img src="/images/renovering.jpg" alt="Renovering">
+                <h3 class="service-title">Renovering</h3>
+                <p>
+                   Vi hjälper dig att förvandla vision till verklighet, från mindre uppfräschningar till totalrenoveringar. Med trygg hantverksskicklighet, personlig rådgivning och fullt fokus på kvalitet tar vi hand om hela processen, från första idé till ett färdigt resultat som du kan njuta av i åratal framöver. 
+                </p>
+            </article>
+
+            <article class="service-card">
+                <img src="/images/specialbygge.jpg" alt="Specialbyggen">
+                <h3 class="service-title">Specialbyggen</h3>
+                <p>
+                    Har du en specifik vision eller svårmöblerade ytor som kräver det lilla extra? Vi bygger platsbyggda inredningar, unika uterum och specialanpassade konstruktioner som är helt anpassade efter ditt hem och dina behov. Med fingertoppskänsla för material och kvalitet förverkligar vi dina idéer.
+                </p>
+            </article>
+
+            <article class="service-card">
+                <img src="/images/tillbyggnad.jpg" alt="Tillbyggnad">
+                <h3 class="service-title">Tillbyggnad</h3>
+                <p>
+                    Växer familjen eller känner du att det är dags för ett extra rum, ett större kök eller en helt ny våning? Vi hjälper dig med hela processen kring din tillbyggnad, från grundläggning och stomme till tak och slutfinish. Vi ser till att tillbyggnaden smälter harmoniskt samman med husets befintliga arkitektur för ett tryggt och proffsigt resultat.
+                </p>
+            </article>
         </section>
+        
         <footer>
             <div class="footer-container">
                 <p class="footer-copy">&copy; <span id="year"></span> Villans Bygg. Alla rättigheter förbehållna.</p>
                 <div class="footer-links">
-                    <a href="tel:0701234567">070-123 45 67</a>
+                    <a href="tel:0701234567">070-856 92 72</a>
                     <a href="mailto#">johnny@villansbygg.se</a>
                 </div>
             </div>
@@ -122,5 +144,6 @@
         </template>
         <script src="quoteBtn.js"></script>
         <script src="projectLoader.js" type="module"></script>
+        <script src="mobileMenu.js"></script>
 </body>
 </html>
