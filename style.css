@@ -343,8 +343,8 @@ h2 {
 
     & .project-desc {
         display: -webkit-box;
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
         margin: 0;
@@ -366,7 +366,6 @@ h2 {
     }
 }
 
-/* SERVICES SECTION */
 #services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -513,7 +512,6 @@ footer {
     }
 }
 
-/* Standardläge på dator (dölj hamburgarknappen) */
 .menu-toggle {
     display: none;
     background: none;
@@ -523,25 +521,7 @@ footer {
     color: #111;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #services,
-    #projects-grid {
-        grid-template-columns: 1fr; 
-
-        & .service-card:nth-child(3),
-        & .project-card:nth-child(3) {
-            margin-top: 0;
-        }
-    }
-}
-
 @media (max-width: 1100px) {
-    /* Visa hamburgarknappen i mobilen */
     .menu-toggle {
         display: block;
         background: none;
@@ -552,9 +532,8 @@ footer {
         justify-self: end;
     }
 
-    /* Dölj navigeringslistan som standard i mobilen tills den aktiveras/öppnas */
     .navbar ul {
-        display: none; /* Dold tills man klickar på hamburgaren */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -567,8 +546,21 @@ footer {
         gap: 20px;
     }
 
-    /* Om du vill att menyn ska visas när man klickar (toggla med en klass som heter 'active' via JS) */
     .navbar ul.active {
         display: flex;
+    }
+        .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #services,
+    #projects-grid {
+        grid-template-columns: 1fr; 
+
+        & .service-card:nth-child(3),
+        & .project-card:nth-child(3) {
+            margin-top: 0;
+        }
     }
 }

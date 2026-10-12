@@ -6,7 +6,7 @@ Källa: https://share.gemini.google/fxgiIpfzjXlk
 
 
 TODO:
-- [] Färdigställa styling på projekt-korten.
+- [x] ~~Färdigställa styling på projekt-korten.~~
 - [x] ~~Lägg till "Visa mer" Knapp i projektkorten som länkar till hela projektet i projects.html~~
 - [x] ~~Lägga till en extern projektsida som preview filerna länkar till. [projects.html]~~
 - [x] ~~Lägga till "Tjänster" sektionen på startsidan~~
@@ -15,8 +15,8 @@ TODO:
 - [x] ~~Skriva om quoteBtn & project-loader själv så det är min egna kod~~
 - [] Styla Modalen på nytt och själv. 
 - [x] ~~Styla visa mer knappen i projects.~~
-- [] Styla Tjänster sektionen.
-- [] Lägga till margin bottom på projektkorten och ta bort det från projekt-sektionen när media queries ska börja definieras.
+- [x] ~~Styla Tjänster sektionen.~~
+- [x] ~~Lägga till margin bottom på projektkorten och ta bort det från projekt-sektionen när media queries ska börja definieras.~~
 - [] Felsöka quoteBtn på projekt-sidan.
 - [] Bygga allProjects.js för att ta in alla projekt på projects.html dynamiskt mot ett template. 
 - [] Styla projects.html.

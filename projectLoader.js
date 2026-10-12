@@ -3,7 +3,7 @@ import {fetchProjects} from "./projectService.js";
 
 const template = document.querySelector("#project-template");
 
-
+//Ta emot projektdata och skapa ett kort för varje projekt.
 function getProjects(project){
     const clone = template.content.cloneNode(true);
     const title = clone.querySelector(".project-title");
@@ -24,7 +24,8 @@ function getProjects(project){
 
     return clone;
 }
-
+/*genererar ett bildspel för varje projektkort med flera bilder. När användaren hovrar över kortet, 
+  startar bildspelet och byter bilder var 1,5 sekund. När användaren lämnar kortet, återställs bilden till den första bilden.*/
 function imageSlideshow(card, images) {
     const dotsContainer = card.querySelector(".slideshow-dots");
     const img = card.querySelector(".project-img");
@@ -72,7 +73,7 @@ function imageSlideshow(card, images) {
 }
 
 
-
+//Hämtar projektdata från JSON-fil och lägger till de tre första projekten i projektgalleriet.
 fetchProjects().then(projects => {
     const grid = document.querySelector("#projects-grid");
     if (grid) {
