@@ -6,8 +6,7 @@
             "/images/Projektbilder/p1/garderob-3.jpg",
             "/images/Projektbilder/p1/garderob-4.jpg"
         ],
-        "description": "Här har det skapats mer förvaring genom att förlänga ut kattvinden och bygga en platsbyggd garderob utan rygg så man kan nyttja all yta på ett smart sätt. Alla delar är handmålade och skrivbordsskiva och knoppar i ek är behandlade med hårdvaxolja.",
-        "year": "2025"
+        "description": "Här har det skapats mer förvaring genom att förlänga ut kattvinden och bygga en platsbyggd garderob utan rygg så man kan nyttja all yta på ett smart sätt. Alla delar är handmålade och skrivbordsskiva och knoppar i ek är behandlade med hårdvaxolja."
     },
     {
         "title": "Tillbyggnad Mur",
@@ -17,8 +16,8 @@
             "/images/Projektbilder/p2/mur3.jpg",
             "/images/Projektbilder/p2/mur4.jpg"
         ],
-        "description": "Två grunder och stödmurar redo för uppbyggnad av tillbyggnad och uterum.",
-        "year": "2025"
+        "description": "Två grunder och stödmurar redo för uppbyggnad av tillbyggnad och uterum."
+
     },
     {
         "title": "Fasadrenovering",
@@ -28,8 +27,8 @@
             "/images/Projektbilder/p3/fasad3.jpg",
             "/images/Projektbilder/p3/fasad4.jpg"
         ],
-        "description": "Ny fasad på boningshus och ladugård, nya fönster och ytterdörr, renovering av stallfönster med nya glas, nybyggd pardörr och skjutport med svartmålade beslag samt ny belysning runt hela gården.",
-        "year": "2025"
+        "description": "Ny fasad på boningshus och ladugård, nya fönster och ytterdörr, renovering av stallfönster med nya glas, nybyggd pardörr och skjutport med svartmålade beslag samt ny belysning runt hela gården."
+
     },
     {
         "title": "Platsbyggt kök",
@@ -38,7 +37,7 @@
             "/images/Projektbilder/p4/kok2.jpg",
             "/images/Projektbilder/p4/kok3.jpg"
         ],
-        "description": "Nya ytskikt och nytt kök, Platsbyggt och penselmålat",
-        "year": "2025"
+        "description": "Nya ytskikt och nytt kök, Platsbyggt och penselmålat"
+
     }
 ]

@@ -8,13 +8,11 @@ function getProjects(project){
     const clone = template.content.cloneNode(true);
     const title = clone.querySelector(".project-title");
     const desc = clone.querySelector(".project-desc");
-    const year = clone.querySelector(".project-year");
     const projectImage = clone.querySelector(".project-img");
     
     
     title.textContent = project.title;
     desc.textContent = project.description;
-    year.textContent = project.year;
     projectImage.alt = project.title;
     projectImage.src = project.images[0];
 
